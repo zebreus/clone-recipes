@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "test -n \"$BUILDING_IMAGE\" && exit 0 || yarn initialize",
+    "initialize": "husky install"
   },
   "dependencies": {
     "autoprefixer": "^10.4.7",
@@ -28,8 +30,19 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^2.7.1",
     "eslint-plugin-tailwindcss": "^3.5.2",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.1",
     "prettier": "^2.7.1",
     "prettier-plugin-organize-imports": "^3.0.0",
     "typescript": "4.7.3"
+  },
+  "lint-staged": {
+    "*.+(js|jsx|ts|tsx)": [
+      "prettier --write",
+      "eslint --cache --fix"
+    ],
+    "*.+(json|css|md|yml|yaml|scss)": [
+      "prettier --write"
+    ]
   }
 }
