@@ -1,5 +1,11 @@
 const common = {
-  extends: ["next/core-web-vitals", "eslint:recommended", "plugin:react/recommended", "eslint-config-next", "plugin:tailwindcss/recommended"],
+  extends: [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "eslint-config-next",
+    "plugin:tailwindcss/recommended",
+  ],
   plugins: ["import", "tailwindcss"],
   rules: {
     "react-hooks/exhaustive-deps": "off",
@@ -100,4 +106,3 @@ module.exports = {
     },
   ],
 }
-

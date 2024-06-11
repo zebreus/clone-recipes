@@ -11,6 +11,7 @@
     "initialize": "husky install"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.4.7",
     "daisyui": "^2.15.4",
     "next": "12.1.6",
@@ -34,6 +35,7 @@
     "lint-staged": "^13.0.1",
     "prettier": "^2.7.1",
     "prettier-plugin-organize-imports": "^3.0.0",
+    "sass": "^1.52.3",
     "typescript": "4.7.3"
   },
   "lint-staged": {
